@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+#include <string.h>
+struct student
+{
+    char name[20];
+    int roll;
+    float marks[2];
+};
+struct student s[3];
+
+
+
+int main()
+{
+    int i,j,temp;
+    for(i=0;i<3;i++)
+    {
+        printf("\n Enter information about student%d",i+1);
+        printf("\n Name:\t");
+        scanf(" %s", s[i].name);
+        printf("\n roll:\t");
+        scanf("%d", &s[i].roll);
+        printf("\n Input marks of 2 subjects:\t");
+        for(j=0;j<2;j++)
+        {
+            scanf("%f", &temp);
+            s[i].marks[j]=temp;
+        }
+    }
+}
+
